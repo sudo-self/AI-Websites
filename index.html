@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+                <title>AI-Powered Projects | Jesse's AI Creations</title>
+                
+            
+                <link rel="icon" href="/favicon.ico" sizes="any">
+                    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+                        
+                 
+                        <meta name="title" content="AI Powered Websites">
+                            <meta name="description" content="Making AI practical for everyday use — thoughtfully designed with the end user in mind, emphasizing intuitive experiences for everyone.">
+                                
+                          
+                                <meta property="og:type" content="website">
+                                    <meta property="og:url" content="https://ai.jessejesse.com">
+                                        <meta property="og:title" content="AI Powered Websites">
+                                            <meta property="og:description" content="Making AI practical for everyday use — thoughtfully designed with the end user in mind, emphasizing intuitive experiences for everyone.">
+                                                <meta property="og:image" content="https://ai.jessejesse.com/og.png">
+                                                    
+                                                   
+                                                    <meta property="twitter:card" content="summary_large_image">
+                                                        <meta property="twitter:url" content="https://ai.jessejesse.com">
+                                                            <meta property="twitter:title" content="AI Powered Websites">
+                                                                <meta property="twitter:description" content="Making AI practical for everyday use — thoughtfully designed with the end user in mind, emphasizing intuitive experiences for everyone.">
+                                                                    <meta property="twitter:image" content="https://ai.jessejesse.com/og.png">
+                                                                        
+                                                                    
+                                                                        <meta name="author" content="JesseJesse.com">
+                                                                            
+                                                                            <script src="https://cdn.tailwindcss.com"></script>
+                                                                    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            100: '#1a1a1a',
+                            200: '#2d2d2d',
+                            300: '#404040',
+                            400: '#525252',
+                            500: '#666666',
+                            600: '#808080',
+                            700: '#999999',
+                            800: '#b3b3b3',
+                            900: '#cccccc',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            transition: background-color 0.3s ease;
+        }
+        
+        body.dark {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: #e5e7eb;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .dark .hero-gradient {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+        }
+        
+        .project-card {
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        .dark .project-card {
+            background-color: #2d2d2d;
+            color: #e5e7eb;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .dark .project-card:hover {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+        }
+        
+        .glow {
+            animation: glow 2s infinite alternate;
+        }
+        
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 5px rgba(99, 102, 241, 0.5);
+            }
+            to {
+                box-shadow: 0 0 20px rgba(99, 102, 241, 0.8);
+            }
+        }
+        
+        .typewriter {
+            overflow: hidden;
+            border-right: .15em solid #6366f1;
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: .15em;
+            animation:
+                typing 3.5s steps(40, end),
+                blink-caret .75s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #25b387; }
+        }
+        
+        .toggle-checkbox:checked {
+            right: 0;
+            border-color: #6b7280;
+        }
+        
+        .toggle-checkbox:checked + .toggle-label {
+            background-color: #4f46e5;
+        }
+        
+        .animate-fadeIn {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+    </head>
+
+<body class="antialiased">
+ 
+    <nav class="bg-white shadow-sm sticky top-0 z-50 dark:bg-dark-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="/" class="flex-shrink-0 flex items-center hover:underline hover:opacity-80 transition">
+                        <i class="fas fa-robot text-indigo-500 text-2xl mr-2"></i>
+                        <span class="text-xl font-bold text-gray-900 dark:text-white">ai.JesseJesse</span>
+                    </a>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+                    <a href="#about" class="text-gray-900 hover:text-indigo-600 px-3 py-2 text-sm font-medium dark:text-gray-300 dark:hover:text-indigo-400">About</a>
+                    <a href="#contact" class="text-gray-900 hover:text-indigo-600 px-3 py-2 text-sm font-medium dark:text-gray-300 dark:hover:text-indigo-400">Contact</a>
+                    
+         
+                    <div class="flex items-center">
+                        <span class="mr-2 text-sm text-gray-600 dark:text-gray-300">
+                            <i class="fas fa-sun"></i>
+                        </span>
+                        <div class="relative inline-block w-12 mr-2 align-middle select-none">
+                            <input type="checkbox" name="toggle" id="toggle" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"/>
+                            <label for="toggle" class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"></label>
+                        </div>
+                        <span class="text-sm text-gray-600 dark:text-gray-300">
+                            <i class="fas fa-moon"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 dark:hover:bg-dark-300" aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+ 
+        <div class="hidden md:hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#projects" class="text-gray-900 hover:text-indigo-600 block px-3 py-2 text-base font-medium dark:text-gray-300 dark:hover:text-indigo-400">Projects</a>
+                <a href="#about" class="text-gray-900 hover:text-indigo-600 block px-3 py-2 text-base font-medium dark:text-gray-300 dark:hover:text-indigo-400">About</a>
+                <a href="#contact" class="text-gray-900 hover:text-indigo-600 block px-3 py-2 text-base font-medium dark:text-gray-300 dark:hover:text-indigo-400">Contact</a>
+                
+             
+                <div class="flex items-center px-3 py-2">
+                    <span class="mr-2 text-gray-600 dark:text-gray-300">
+                        <i class="fas fa-sun"></i>
+                    </span>
+                    <div class="relative inline-block w-12 mr-2 align-middle select-none">
+                        <input type="checkbox" name="toggle-mobile" id="toggle-mobile" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"/>
+                        <label for="toggle-mobile" class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"></label>
+                    </div>
+                    <span class="text-gray-600 dark:text-gray-300">
+                        <i class="fas fa-moon"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-gradient text-white">
+        <div class="max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-6">
+                    <span class="typewriter">AI Powered Websites</span>
+            <p class="mt-4 max-w-2xl text-xl text-gray-300 mx-auto dark:text-gray-300">
+                Each Website showcases a different AI model and is 100% free.
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+            <div class="project-card bg-white rounded-lg overflow-hidden dark:bg-dark-200">
+                <div class="p-6">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0 bg-indigo-100 p-3 rounded-lg dark:bg-indigo-900">
+                            <i class="fas fa-code text-indigo-600 dark:text-indigo-300 text-xl"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-medium text-gray-900 dark:text-white">Insta-Apps: React App Developer</h3>
+                            <p class="mt-1 text-sm text-indigo-600 dark:text-indigo-400">AI-powered React development</p>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-gray-600 dark:text-gray-300">
+                        A React developer that can create apps with a single sentence. Generate TSX components with Google Gemini.<br><br><code>npm i create-react-tsx</code>
+                    </p>
+                    <div class="mt-6">
+                        <a href="https://apps.jessejesse.com" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-dark-200">
+                            Visit Insta-Apps
+                            <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+         
+            <div class="project-card bg-white rounded-lg overflow-hidden dark:bg-dark-200">
+                <div class="p-6">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0 bg-purple-100 p-3 rounded-lg dark:bg-purple-900">
+                            <i class="fas fa-image text-purple-600 dark:text-purple-300 text-xl"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-medium text-gray-900 dark:text-white">Text-to-Image: Stable Diffusion</h3>
+                            <p class="mt-1 text-sm text-purple-600 dark:text-purple-400">AI image generation</p>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-gray-600 dark:text-gray-300">
+                        A modern text-to-image API built on Cloudflare Workers for fast and efficient image generation. Stable diffusion converts text prompts into detailed, realistic visuals.
+                    </p>
+                    <div class="mt-6">
+                        <a href="https://image.jessejesse.com" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 dark:focus:ring-offset-dark-200">
+                            Try Text-to-Image
+                            <i class="fas fa-paint-brush ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+        
+            <div class="project-card bg-white rounded-lg overflow-hidden dark:bg-dark-200">
+                <div class="p-6">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0 bg-blue-100 p-3 rounded-lg dark:bg-blue-900">
+                            <i class="fas fa-comments text-blue-600 dark:text-blue-300 text-xl"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-medium text-gray-900 dark:text-white">Zephyer: 7B Parameter Natural Language Model</h3>
+                            <p class="mt-1 text-sm text-blue-600 dark:text-blue-400">Conversational AI</p>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-gray-600 dark:text-gray-300">
+                        Zephyer is a 7 billion parameter natural language model trained on public synthetic datasets. As a helpful assistant, it offers a powerful GPT-like conversational experience leveraging Grouped-Query Attention.
+                    </p>
+                    <div class="mt-6">
+                        <a href="https://ai.jessejesse.xyz/" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-offset-dark-200">
+                            Chat with Zephyer
+                            <i class="fas fa-comment-dots ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card bg-white rounded-lg overflow-hidden dark:bg-dark-200">
+                <div class="p-6">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0 bg-green-100 p-3 rounded-lg dark:bg-green-900">
+                            <i class="fas fa-headset text-green-600 dark:text-green-300 text-xl"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-medium text-gray-900 dark:text-white">AI Jesse: Tech+ Certified Technician</h3>
+                            <p class="mt-1 text-sm text-green-600 dark:text-green-400">IT support assistant</p>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-gray-600 dark:text-gray-300">
+                        A CompTIA Tech+ certified assistant, Jesse can troubleshoot IT issues, provide networking guidance, and assist with technical diagnostics and functions much like a helpdesk built with React and Vite Frameworks.
+                    </p>
+                    <div class="mt-6">
+                        <a href="https://ai-jesse.vercel.app" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 dark:focus:ring-offset-dark-200">
+                            Talk to Jesse
+                            <i class="fas fa-laptop-code ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+    </div>
+            </div>
+        </div>
+    </main>
+    
+
+    <section class="bg-gray-50 py-16 dark:bg-dark-100" id="about">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl dark:text-white">
+                    About These Projects
+                </h2>
+                <p class="mt-4 max-w-2xl text-xl text-gray-600 lg:mx-auto dark:text-gray-300">
+                    developed by JesseJesse.com
+                </p>
+            </div>
+            
+            <div class="mt-20">
+                <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
+                    <div class="text-center">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white mx-auto">
+                            <i class="fas fa-lightbulb text-xl"></i>
+                        </div>
+                        <div class="mt-5">
+                            <h3 class="text-lg font-medium text-gray-900 dark:text-white">Innovation Focused</h3>
+                            <p class="mt-2 text-base text-gray-600 dark:text-gray-300">
+                                Each project creates something based on user input focusing on creativity and innovation.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-purple-500 text-white mx-auto">
+                            <i class="fas fa-rocket text-xl"></i>
+                        </div>
+                        <div class="mt-5">
+                            <h3 class="text-lg font-medium text-gray-900 dark:text-white">Cutting-Edge Tech</h3>
+                            <p class="mt-2 text-base text-gray-600 dark:text-gray-300">
+                            All projects are built using a modern production stack, including Next.js, React, TypeScript, Tailwind CSS, and Cloudflare Workers.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white mx-auto">
+                            <i class="fas fa-users text-xl"></i>
+                        </div>
+                        <div class="mt-5">
+                            <h3 class="text-lg font-medium text-gray-900 dark:text-white">User-Centric Design</h3>
+                            <p class="mt-2 text-base text-gray-600 dark:text-gray-300">
+                            Making AI practical for everyday use — thoughtfully designed with the end user in mind, emphasizing intuitive experiences for everyone.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="bg-white py-16 dark:bg-dark-200" id="contact">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="lg:text-center mb-12">
+          <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl dark:text-white">
+            Get In Touch
+          </h2>
+          <p class="mt-4 max-w-2xl text-xl text-gray-600 lg:mx-auto dark:text-gray-300">
+            Have questions or feedback get in touch!
+          </p>
+        </div>
+
+        <div class="bg-indigo-50 rounded-lg shadow-md overflow-hidden dark:bg-dark-300">
+          <div class="px-6 py-8 sm:p-10">
+            <div class="grid grid-cols-1 gap-10 sm:grid-cols-2">
+              
+          
+              <div>
+                <h3 class="text-lg font-medium text-gray-900 dark:text-white">Contact Information</h3>
+                <div class="mt-4 space-y-6">
+                  
+                 
+                  <div class="flex items-start">
+                    <div class="flex-shrink-0">
+                      <i class="fas fa-envelope text-indigo-500"></i>
+                    </div>
+                    <div class="ml-3">
+                      <p class="text-base text-gray-600 dark:text-gray-300">Submit a message</p>
+                      <a href="https://email.jessejesse.com" target="_blank" rel="noopener noreferrer" class="text-base font-medium text-blue-600 dark:text-blue-400 hover:underline">
+                        Contact Form
+                      </a>
+                    </div>
+                  </div>
+
+             
+                  <div class="flex items-start">
+                    <div class="flex-shrink-0">
+                      <i class="fab fa-github text-indigo-500"></i>
+                    </div>
+                    <div class="ml-3">
+                      <p class="text-base text-gray-600 dark:text-gray-300">View my projects</p>
+                      <a href="https://github.com/sudo-self/" target="_blank" rel="noopener noreferrer" class="text-base font-medium text-blue-600 dark:text-blue-400 hover:underline">
+                        GitHub @sudo-self
+                      </a>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+    
+              <div>
+                <h3 class="text-lg font-medium text-gray-900 dark:text-white">Find Me Social Platforms</h3>
+                <div class="mt-4 flex space-x-6">
+                  
+             
+                  <a href="https://x.com/ilostmyipad" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-indigo-600 dark:text-gray-400 dark:hover:text-indigo-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 24 24">
+                      <path d="M21.5 2.5h-3.4L12 9.3 5.9 2.5H2.5l7.5 8.2-7.7 10.8h3.4L12 14.7l6.2 6.8h3.4l-7.6-8.3 7.5-10.7z"/>
+                    </svg>
+                  </a>
+
+            
+                  <a href="https://github.com/sudo-self" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-indigo-600 dark:text-gray-400 dark:hover:text-indigo-400">
+                    <i class="fab fa-github text-2xl"></i>
+                  </a>
+
+          
+                  <a href="https://dev.to/sudo-self" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-indigo-600 dark:text-gray-400 dark:hover:text-indigo-400">
+                    <i class="fab fa-dev text-2xl"></i>
+                  </a>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white dark:bg-dark-300">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-medium mb-4">ai.JesseJesse.com</h3>
+                    <p class="text-gray-400">
+                        Exploring the potential of artificial intelligence models with innovative applications.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-medium mb-4">Site Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-gray-400 hover:text-white">About</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-medium mb-4">Technologies</h3>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 rounded-full text-xs font-medium bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-300">React</span>
+                    <span class="px-3 py-1 rounded-full text-xs font-medium bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-300">Next.js</span>
+                    <span class="px-3 py-1 rounded-full text-xs font-medium bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-300">TypeScript</span>
+                    <span class="px-3 py-1 rounded-full text-xs font-medium bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-300">Hugging Face</span>
+                    <span class="px-3 py-1 rounded-full text-xs font-medium bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-300">Cloudflared</span>
+                    <span class="px-3 py-1 rounded-full text-xs font-medium bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-300">Tailwind</span>
+                    <span class="px-3 py-1 rounded-full text-xs font-medium bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-300">Vite</span>
+                    <span class="px-3 py-1 rounded-full text-xs font-medium bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-300">Vercel</span>
+                  </div>
+                </div>
+
+        
+            </div>
+        <div class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
+          <p class="text-sm text-center">
+            <a href="https://ai.jessejesse.com" target="_blank" rel="noopener noreferrer"
+               class="text-gray-500 hover:text-indigo-600 dark:text-gray-400 dark:hover:text-indigo-400 transition-colors">
+              ai.JesseJesse.com
+            </a>
+          </p>
+        </div>
+
+        </div>
+    </footer>
+    
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+            } else {
+                menu.classList.add('hidden');
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+        
+        // Animation on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fadeIn');
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.project-card').forEach(card => {
+            observer.observe(card);
+        });
+        
+        // Dark/Light mode toggle
+        const toggle = document.getElementById('toggle');
+        const toggleMobile = document.getElementById('toggle-mobile');
+        const html = document.documentElement;
+        
+        // Check for saved user preference, if any, on load of the website
+        if (localStorage.getItem('darkMode') === 'true') {
+            html.classList.add('dark');
+            toggle.checked = true;
+            toggleMobile.checked = true;
+        } else if (localStorage.getItem('darkMode') === 'false') {
+            html.classList.remove('dark');
+            toggle.checked = false;
+            toggleMobile.checked = false;
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            // If no preference saved, check system preference
+            html.classList.add('dark');
+            toggle.checked = true;
+            toggleMobile.checked = true;
+            localStorage.setItem('darkMode', 'true');
+        }
+        
+        // Toggle dark/light mode
+        function toggleDarkMode(isDark) {
+            if (isDark) {
+                html.classList.add('dark');
+                localStorage.setItem('darkMode', 'true');
+            } else {
+                html.classList.remove('dark');
+                localStorage.setItem('darkMode', 'false');
+            }
+        }
+        
+        // Desktop toggle
+        toggle.addEventListener('change', function() {
+            toggleDarkMode(this.checked);
+            toggleMobile.checked = this.checked;
+        });
+        
+        // Mobile toggle
+        toggleMobile.addEventListener('change', function() {
+            toggleDarkMode(this.checked);
+            toggle.checked = this.checked;
+        });
+        
+        // Listen for system preference changes
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+            if (localStorage.getItem('darkMode') === null) {
+                toggleDarkMode(e.matches);
+                toggle.checked = e.matches;
+                toggleMobile.checked = e.matches;
+            }
+        });
+    </script>
+</body>
+</html>
+
